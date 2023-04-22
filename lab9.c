@@ -44,7 +44,7 @@ int parseData(char* inputFileName, struct RecordType** ppData)
             pRecord = *ppData + i;
             fscanf(inFile, "%d ", &n);
             pRecord->id = n;
-            fscanf(inFile, "%s ", pRecord->name); // changed to a string
+            fscanf(inFile, "%s ", pRecord->name); 
             fscanf(inFile, "%d ", &n);
             pRecord->order = n;
         }
@@ -62,7 +62,7 @@ void printRecords(struct RecordType pData[], int dataSz)
     printf("\nRecords:\n");
     for (i = 0; i < dataSz; ++i)
     {
-        printf("\t%d %s %d\n", pData[i].id, pData[i].name, pData[i].order); // changed to a string
+        printf("\t%d %s %d\n", pData[i].id, pData[i].name, pData[i].order); 
     }
     printf("\n\n");
 }
